@@ -31,4 +31,10 @@ class ProjectRepository {
             [id]
         )
     }
+
+    getById(id) {
+        return this.dao.get(
+                `SELECT * FROM projects WHERE id = ?`,
+            [id])
+    }
 }
