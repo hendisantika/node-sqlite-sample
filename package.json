@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/hendisantika/node-sqlite-sample/issues"
   },
-  "homepage": "https://github.com/hendisantika/node-sqlite-sample#readme"
+  "homepage": "https://github.com/hendisantika/node-sqlite-sample#readme",
+  "dependencies": {
+    "sqlite3": "^4.0.4"
+  }
 }
