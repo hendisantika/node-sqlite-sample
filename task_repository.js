@@ -42,4 +42,10 @@ class TaskRepository {
             [id]
         )
     }
+
+    getById(id) {
+        return this.dao.get(
+                `SELECT * FROM tasks WHERE id = ?`,
+            [id])
+    }
 }
