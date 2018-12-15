@@ -35,4 +35,11 @@ class TaskRepository {
             [name, description, isComplete, projectId, id]
         )
     }
+
+    delete(id) {
+        return this.dao.run(
+                `DELETE FROM tasks WHERE id = ?`,
+            [id]
+        )
+    }
 }
