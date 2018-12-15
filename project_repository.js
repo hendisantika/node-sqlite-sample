@@ -24,4 +24,11 @@ class ProjectRepository {
             [name, id]
         )
     }
+
+    delete(id) {
+        return this.dao.run(
+                `DELETE FROM projects WHERE id = ?`,
+            [id]
+        )
+    }
 }
