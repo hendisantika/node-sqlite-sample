@@ -16,4 +16,12 @@ class ProjectRepository {
             'INSERT INTO projects (name) VALUES (?)',
             [name])
     }
+
+    update(project) {
+        const {id, name} = project;
+        return this.dao.run(
+                `UPDATE projects SET name = ? WHERE id = ?`,
+            [name, id]
+        )
+    }
 }
