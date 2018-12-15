@@ -41,4 +41,10 @@ class ProjectRepository {
     getAll() {
         return this.dao.all(`SELECT * FROM projects`)
     }
+
+    getTasks(projectId) {
+        return this.dao.all(
+                `SELECT * FROM tasks WHERE projectId = ?`,
+            [projectId])
+    }
 }
