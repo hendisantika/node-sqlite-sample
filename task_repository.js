@@ -15,4 +15,11 @@ class TaskRepository {
           REFERENCES projects(id) ON UPDATE CASCADE ON DELETE CASCADE)`;
         return this.dao.run(sql)
     }
+
+    create(name, description, isComplete, projectId) {
+        return this.dao.run(
+                `INSERT INTO tasks (name, description, isComplete, projectId)
+        VALUES (?, ?, ?, ?)`,
+            [name, description, isComplete, projectId])
+    }
 }
