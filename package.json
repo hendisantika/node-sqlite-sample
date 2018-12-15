@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/hendisantika/node-sqlite-sample#readme",
   "dependencies": {
+    "bluebird": "^3.5.3",
     "sqlite3": "^4.0.4"
   }
 }
