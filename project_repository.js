@@ -10,4 +10,10 @@ class ProjectRepository {
       name TEXT)`;
         return this.dao.run(sql)
     }
+
+    create(name) {
+        return this.dao.run(
+            'INSERT INTO projects (name) VALUES (?)',
+            [name])
+    }
 }
